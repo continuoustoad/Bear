@@ -78,14 +78,14 @@ math -> [.1, .2] |> @(.0 -> toOperator)
 
 ### Strings
 * `string` converts a list into a string. Eg. `['a', 'b'] -> "ab"`
-* `toString` converts Lists, Numbers, Strings, Chars (implict) into strings. Eg `49 -> "49"; ['a', 'b'] -> "['a','b']"; 'x' -> "x"; "abc" -> "abc"`.
-Otherwise tries to use `@String`, 
-else `:toString`,
-else `:@toString`,
-else `getType |> :toString`,
-else `getType |> :@toString`,
-and finally `cast String`,
-if none work, throws `!CastError/String/`.
+* `toString` converts Lists, Numbers, Strings, Chars (implict) into strings. Eg `49 -> "49"; ['a', 'b'] -> "['a','b']"; 'x' -> "x"; "abc" -> "abc"`. 
+  Otherwise tries to use `@String`, 
+  else `:toString`,
+  else `:@toString`,
+  else `getType |> :toString`,
+  else `getType |> :@toString`,
+  and finally `cast String`,
+  if none work, throws `!CastError/String/`.
 
 ## ...
 ```fsharp
