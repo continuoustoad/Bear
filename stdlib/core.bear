@@ -1,0 +1,17 @@
+internal type Char;
+internal type Number;
+internal type List;
+internal type Type;
+
+internal type CHARPTR;   // = char*
+internal INITSTRINGDATA; // = return (char*)malloc(0);
+internal GETCHAR;        // = return X[Y];
+
+type String -> {{
+	private [{CHARPTR}]data;
+	public new -> . |> :data -> INITSTRINGDATA;
+	public get n -> n |> :data -> GETCHAR;
+}};
+
+[{String -> Char}] head -> :data -> .0 
+
